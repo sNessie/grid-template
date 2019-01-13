@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    grid-template-rows: 100vh repeat(9, min-content);
+    grid-template-columns: minmax(min-content);
+    .header {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        background-color: red;
+    }
+}

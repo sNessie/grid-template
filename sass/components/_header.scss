@@ -1,0 +1,39 @@
+.header {
+    font-size: 1.4rem;
+    color: $color-text;
+    position: relative;
+    .contact{
+        &__text {
+            display: none;
+
+        }
+        &__phone,
+        &__email {
+            display: none;
+        }
+        &__icon{
+            fill: $color-text;
+            @include size(2rem);
+            @include margin($left: 7rem, $right: 0.7rem);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        .icon__item {
+            display: block;
+            @include size (3.3rem, .4rem);
+            @include margin($bottom: .5rem);
+            background: $color-white;
+            border-radius: 0.3rem;
+        }
+    }
+    &__navigation{
+        display: none;
+    }
+}
+
