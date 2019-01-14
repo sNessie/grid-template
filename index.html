@@ -28,28 +28,34 @@
                 +080 0444 333 444
             </p>
         </div>
-        <nav class="header__nav">
-            <a href="#" class="header__logo"><img src="img/logo_img.png" alt="buildx"></a>
-            <button class="header__icon">
-                <span class="icon__item"></span>
-                <span class="icon__item"></span>
-                <span class="icon__item"></span>
-            </button>
-            <ul class="header__navigation">
-                <li class="navigation__link navigation__link-active"><a href="#">About</a></li>
-                <li class="navigation__link"><a href="#">Features</a></li>
-                <li class="navigation__link"><a href="#">Project</a></li>
-                <li class="navigation__link"><a href="#">Pages</a></li>
-                <li class="navigation__link"><a href="#">Contact</a></li>
-                <li class="navigation__link">
-                    <a href="#">
-                        <svg class="contact__icon">
+        <div class="header__nav">
+            <a href="#" class="header__logo">
+                <img src="img/logo_img.png" alt="buildx">
+            </a>
+            <nav class="header__navigation">
+                <input type="checkbox" class="navigation__checkbox"  id="nav__toggle">
+                <label for="nav__toggle" class="navigation__icon">
+                    <span class="icon__item"></span>
+                    <span class="icon__item"></span>
+                    <span class="icon__item"></span>
+                </label>
+                <div class="navigation__bcg">&nbsp;</div>
+            <ul class="navigation__nav">
+                <li class="navigation__item"><a href="#" class="navigation__link navigation__link-active">About</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Features</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Project</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Pages</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">
+                        <svg class="navigation__search">
                             <use xlink:href="img/symbol.svg#icon-magnifying-glass"></use>
                         </svg>
                     </a>
                 </li>
             </ul>
         </nav>
+        </div>
         <section class="home">
             <h1 class="home__title">We Do Big Things With Big Ideas</h1>
             <p class="home__description">Talk To Our Experts and Get Your Dream Home Done. If you dream of designing a new home that take full advantage  of the unique geography and views of land that you love</p>

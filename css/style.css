@@ -22,7 +22,7 @@ body {
   .container .header {
     grid-column: 1/-1;
     grid-row: 1/2;
-    background-color: red; }
+    background: red; }
 
 .header {
   font-size: 1.4rem;
@@ -32,24 +32,76 @@ body {
     display: none; }
   .header .contact__phone, .header .contact__email {
     display: none; }
-  .header .contact__icon {
-    fill: #696969;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 7rem;
-    margin-right: 0.7rem; }
-  .header__icon {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    background: none;
-    border: none; }
-    .header__icon .icon__item {
-      display: block;
-      width: 3.3rem;
-      height: 0.4rem;
-      margin-bottom: 0.5rem;
-      background: #fff;
-      border-radius: 0.3rem; }
   .header__navigation {
-    display: none; }
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 15; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__icon {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  z-index: 30; }
+  .navigation__icon .icon__item {
+    display: block;
+    width: 3.5rem;
+    height: 0.4rem;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    border-radius: 0.3rem;
+    z-index: 30; }
+
+.navigation__bcg {
+  position: fixed;
+  top: 0.4rem;
+  right: 0.7rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#fff, #fab702);
+  z-index: 10;
+  transform: scale(30); }
+
+.navigation__nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  z-index: 15;
+  color: #3b404f; }
+
+.navigation__item {
+  margin: 1.5rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #3b404f;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fab702 50%);
+  background-size: 230%;
+  transition: all .4s; }
+
+.navigation__link:hover {
+  background-position: 100%; }
+
+.navigation__link-active {
+  color: #3b404f; }
+
+.navigation__search {
+  fill: #3b404f;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 3.5rem; }
