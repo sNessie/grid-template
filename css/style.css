@@ -21,13 +21,14 @@ body {
   grid-template-columns: minmax(min-content); }
   .container .header {
     grid-column: 1/-1;
-    grid-row: 1/2;
-    background: red; }
+    grid-row: 1/2; }
 
 .header {
   font-size: 1.4rem;
   color: #696969;
-  position: relative; }
+  position: relative;
+  background-image: url(../../img/bcg__home.jpg);
+  padding-top: 2rem; }
   .header .contact__text {
     display: none; }
   .header .contact__phone, .header .contact__email {
@@ -37,38 +38,48 @@ body {
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 15; }
 
 .navigation__checkbox {
   display: none; }
 
 .navigation__icon {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
+  position: absolute;
+  top: 2.7rem;
+  right: 3.6rem;
   background: none;
   border: none;
-  z-index: 30; }
+  z-index: 30;
+  cursor: pointer; }
   .navigation__icon .icon__item {
     display: block;
+    position: absolute;
+    right: 0;
     width: 3.5rem;
     height: 0.4rem;
     margin-bottom: 0.5rem;
-    background: #fff;
+    background: #3b404f;
     border-radius: 0.3rem;
-    z-index: 30; }
+    z-index: 30;
+    transition: all .2s; }
+    .navigation__icon .icon__item:nth-child(1) {
+      top: 0; }
+    .navigation__icon .icon__item:nth-child(2) {
+      top: 1rem; }
+    .navigation__icon .icon__item:nth-child(3) {
+      top: 2rem; }
 
 .navigation__bcg {
   position: fixed;
-  top: 0.4rem;
+  top: 1rem;
   right: 0.7rem;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
   background-image: radial-gradient(#fff, #fab702);
   z-index: 10;
-  transform: scale(30); }
+  transition: transform .8s; }
 
 .navigation__nav {
   position: absolute;
@@ -77,8 +88,11 @@ body {
   transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
-  z-index: 15;
-  color: #3b404f; }
+  z-index: 20;
+  color: #3b404f;
+  opacity: 0;
+  width: 0;
+  transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .navigation__item {
   margin: 1.5rem; }
@@ -105,3 +119,22 @@ body {
   width: 3rem;
   height: 3rem;
   margin: 0 3.5rem; }
+
+.navigation__checkbox:checked ~ .navigation__bcg {
+  transform: scale(25); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__checkbox:checked + .navigation__icon .icon__item:nth-child(1) {
+  transform: rotate(135deg);
+  top: .4rem; }
+
+.navigation__checkbox:checked + .navigation__icon .icon__item:nth-child(2) {
+  right: 100px;
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__icon .icon__item:nth-child(3) {
+  transform: rotate(-135deg);
+  top: .4rem; }
