@@ -3,8 +3,36 @@
     grid-template-rows: 100vh repeat(9, min-content);
     grid-template-columns: minmax(min-content);
     .header {
-        grid-column: 1/-1;
+        grid-column: 2/-1;
         grid-row: 1/2;
-        
+        &__contact{
+            display: grid;
+            grid-template-columns:  1 fr 1fr 1fr 1fr 1fr;
+            align-items: center;
+        }
+        &__nav {
+            @include sm {
+                display: grid;
+                grid-template-columns: 1fr 1fr 5fr 1fr;
+            }
+            .header__logo {
+                grid-column: 2/3;
+            }
+            .navigation__nav {
+                grid-column: 3/-2;
+            }
+        }
     }
+    .contact {
+        &__text {
+            grid-column: 2/3;
+        }
+        &__email {
+            grid-column: 3/4;
+        }
+        &__phone {
+            grid-column: 4/5;
+        }
+    }
+    
 }
