@@ -91,7 +91,6 @@
 
     }
     &__nav{
-    //    @include absolute-center;
        list-style: none;
        text-align: center;
        z-index: 20;
@@ -143,6 +142,7 @@
         transform: scale(25);
     }
     &__checkbox:checked ~ &__nav {
+        @include absolute-center;
         opacity: 1;
         width: 100%;
     }
