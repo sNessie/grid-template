@@ -7,17 +7,31 @@
         grid-row: 1/2;
         display: grid;
         grid-template-columns:  1fr repeat(2, 3fr)  1fr;
+        grid-template-rows: 10vh 20vh 60vh;
         &__contact {
             @include sm{
-            height: 20vh;
             grid-column: 1/-1;
             display: grid;
             grid-template-columns: 2fr repeat(2, 1fr);
             }
-            
         }
         &__nav {
-            grid-column: 1/-1;
+            grid-column: 2/-2;
+            display: grid;
+            grid-template-columns:  1fr 1.5fr;
+            .header__logo {
+                grid-column: 1/2;
+            }
+            .header__navigation {
+                grid-column: 2/-1;
+            .navigation__nav{
+                @include sm{
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                }
+            }
+            }
         }
         .home {
             grid-column: 1/-1;
