@@ -10,26 +10,16 @@
    &__contact{
        display: none;
         @include sm {
+            display: block;
+            padding: 0 10%;
             padding-top: 2rem;
             background-color: $bcg-header-contact;
         }
    }
     .contact{
-        &__text {
-            display: none;
-            @include sm {
-                display: block;
-            }
-        }
-        &__phone,
-        &__email {
-            display: none;
-            @include sm {
-                display: block;
-            }
-        }
         &__icon {
             @include size(3rem);
+            margin: -1rem 1rem;
         }
     }
     &__navigation {
@@ -99,11 +89,8 @@
        width: 0;
        transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
        @include sm {
-        display: grid;
-        grid-template-columns: repeat(6, min-content);
-        position: relative;
-        left: auto;
-        top: auto;
+        // display: grid;
+        // grid-template-columns: repeat(6, min-content);
 
         opacity: 1;
     }
