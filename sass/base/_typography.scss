@@ -7,7 +7,11 @@
         grid-row: 1/2;
         display: grid;
         grid-template-columns:  1fr repeat(2, 3fr)  1fr;
-        grid-template-rows: 10vh 20vh 60vh;
+        grid-template-rows: 10vh 15vh 75vh;
+        background-image: url(../../img/bcg__home.jpg);
+        background-position: right 0 top 25vh; 
+        background-repeat: no-repeat; 
+        background-size: cover;
         &__contact {
             @include sm{
             grid-column: 1/-1;
@@ -19,6 +23,7 @@
             grid-column: 2/-2;
             display: grid;
             grid-template-columns:  1fr 1.5fr;
+            align-items: center;
             .header__logo {
                 grid-column: 1/2;
             }
@@ -34,8 +39,10 @@
             }
         }
         .home {
-            grid-column: 1/-1;
-        }
+            grid-column: 2/-2;
+            align-self: center;
+            width: 50%;
+            }
     }
     .services {
         grid-column: 2/-2;

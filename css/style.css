@@ -24,7 +24,11 @@ body {
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr repeat(2, 3fr) 1fr;
-    grid-template-rows: 10vh 20vh 60vh; }
+    grid-template-rows: 10vh 15vh 75vh;
+    background-image: url(../../img/bcg__home.jpg);
+    background-position: right 0 top 25vh;
+    background-repeat: no-repeat;
+    background-size: cover; }
     @media (min-width: 57.6rem) {
       .container .header__contact {
         grid-column: 1/-1;
@@ -33,7 +37,8 @@ body {
     .container .header__nav {
       grid-column: 2/-2;
       display: grid;
-      grid-template-columns: 1fr 1.5fr; }
+      grid-template-columns: 1fr 1.5fr;
+      align-items: center; }
       .container .header__nav .header__logo {
         grid-column: 1/2; }
       .container .header__nav .header__navigation {
@@ -44,7 +49,9 @@ body {
             display: grid;
             grid-template-columns: repeat(6, 1fr); } }
     .container .header .home {
-      grid-column: 1/-1; }
+      grid-column: 2/-2;
+      align-self: center;
+      width: 50%; }
   .container .services {
     grid-column: 2/-2;
     grid-row: 2/3; }
@@ -90,6 +97,8 @@ body {
     width: 3rem;
     height: 3rem;
     margin: -1rem 1rem; }
+  .header__nav {
+    background-color: #fff; }
   .header__navigation {
     width: 100vw;
     height: 100vh;
@@ -100,7 +109,7 @@ body {
     @media (min-width: 57.6rem) {
       .header__navigation {
         position: relative;
-        background-color: white;
+        background-color: #fff;
         height: auto;
         width: auto; } }
 
@@ -217,3 +226,31 @@ body {
 .navigation__checkbox:checked + .navigation__icon .icon__item:nth-child(3) {
   transform: rotate(-135deg);
   top: .4rem; }
+
+.home {
+  color: #fff; }
+  .home__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 3.4rem; }
+  .home__description {
+    font-family: Roboto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    margin-bottom: 3.6rem; }
+  .home__btn {
+    background-color: #fab702;
+    padding: 2.2rem 5rem;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: all .8s; }
+    .home__btn:hover {
+      color: #fab702;
+      background-color: #fff; }
