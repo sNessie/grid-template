@@ -1,0 +1,50 @@
+.services {
+    text-align: center;
+    &__title {
+        color:$color-title;
+        font-size: 4.4rem;
+        font-weight: 700;
+        line-height: 5.4rem;
+        text-transform: uppercase;
+        @include margin($bottom: 3.4rem, $top: 10rem);
+    }
+    &__description {
+        padding: 0 25%;
+        color: $color-text-description;
+        font-size: 1.4rem;
+        @include margin($bottom: 10rem);
+    }
+    &__gallery {
+        text-align: left;
+    }
+    .gallery {
+        &__img {
+            @include size(36.1rem, $height:23.6rem);
+        }
+        &__title {
+            @include margin($bottom: 3rem, $top: 3rem);
+            font-family: $font-montserrat;
+            color:$color-link-active;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 3rem;
+            text-transform: uppercase;
+        }
+        &__description {
+            font-family: $font-roboto;
+            color: $color-text-description;
+            font-size: 1.4rem;
+        }
+        &__btn {
+            @include margin($top: 3rem);
+            color:$color-link-active;
+            font-size: 1.4rem;
+            border: none;
+            border-bottom: 1px solid $color-link-active;
+            text-transform: uppercase;
+            padding-bottom: .5rem;
+            background: none;
+            cursor: pointer;
+        }
+    }
+}
